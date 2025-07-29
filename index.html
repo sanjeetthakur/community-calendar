@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Community Calendar</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="calendar-container">
+    <header>
+      <h1>📅 Community Calendar</h1>
+      <p>Stay updated with all upcoming events and classes</p>
+    </header>
+
+    <div class="calendar-header">
+      <button class="nav-btn" id="prevMonth">‹</button>
+      <span class="month-display" id="monthDisplay"></span>
+      <button class="nav-btn" id="nextMonth">›</button>
+
+      <div class="view-switch">
+        <button class="view-btn active" data-view="month">Month</button>
+        <button class="view-btn" data-view="week">Week</button>
+        <button class="view-btn" data-view="day">Day</button>
+        <button class="view-btn" id="jumpToday">Today</button>
+      </div>
+    </div>
+
+    <div class="calendar-grid" id="calendar"></div>
+  </div>
+
+  <!-- MODAL -->
+  <div class="modal-overlay" id="modalOverlay">
+    <div class="modal">
+      <h2 id="modalTitle">New Event</h2>
+      <input type="text" id="eventTitle" placeholder="Event Title" />
+      <input type="time" id="eventTime" />
+      <textarea id="eventDescription" placeholder="Event Description"></textarea>
+      <select id="eventColor">
+        <option value="orange">🧠 Orange (AI)</option>
+        <option value="blue">💻 Blue (Frontend)</option>
+        <option value="green">✅ Green (Task)</option>
+        <option value="purple">🧪 Purple (Backend)</option>
+        <option value="yellow">📢 Yellow (Meeting)</option>
+      </select>
+      <div class="modal-buttons">
+        <button id="saveEvent">Save</button>
+        <button id="closeModal">Cancel</button>
+        <button id="deleteEvent" style="display:none; background-color: crimson; color: white;">🗑 Delete</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js" defer></script>
+</body>
+</html>
